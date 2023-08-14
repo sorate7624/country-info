@@ -1,0 +1,30 @@
+.wrapper {
+  .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column;
+  }
+  h3.title {
+    font-size: 60px;
+    margin: 0;
+    color: $color-good;
+  }
+
+  .refresh-btn {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: $color-pastel-blue;
+    color: $color-blue;
+
+    &:hover {
+      background-color: $color-blue;
+      color: $color-pastel-blue;
+    }
+  }
+}
