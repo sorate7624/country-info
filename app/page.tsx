@@ -28,10 +28,10 @@ export default async function Home() {
           : 'white'
         : 'white',
     fillOpacity: countryValue,
-    stroke: 'black',
+    stroke: countryValue ? 'black' : 'transparent',
     strokeWidth: 1,
     strokeOpacity: 0.2,
-    cursor: 'pointer',
+    cursor: countryValue ? 'pointer' : 'default',
   });
 
   const countryClick = ({
@@ -44,12 +44,39 @@ export default async function Home() {
         countryCode.toUpperCase()
       );
       console.log('countryInfo', countryInfo);
+      console.log(
+        'countryName, countryCode, countryValue:',
+        countryName,
+        countryCode,
+        countryValue
+      );
     }
   };
+
+  const getHref = ({ countryName, countryCode }: CountryContext) => ({
+    href: `/detail/${countryCode}`,
+  });
 
   return (
     <>
       <main className={HomeStyles['main']}>
+        <section>
+          <h2 className={HomeStyles['title']}>Select country!</h2>
+          <WorldMap
+            color="blue"
+            backgroundColor="transparent"
+            // size="responsive"
+            // size="xxl"
+            data={countryData}
+            hrefFunction={getHref}
+            // onClickFunction={countryClick}
+            styleFunction={getStyle}
+            tooltipTextFunction={({ countryName }: CountryContext) =>
+              `${countryName}`
+            }
+            richInteraction={true}
+          />
+        </section>
         <aside className={HomeStyles['aside']}>
           <ul>
             <li className={HomeStyles['good']}>
@@ -70,29 +97,7 @@ export default async function Home() {
             </li>
           </ul>
         </aside>
-        <section>
-          <WorldMap
-            color="blue"
-            backgroundColor="transparent"
-            // size="responsive"
-            // size="xxl"
-            data={countryData}
-            // hrefFunction={getHref}
-            onClickFunction={countryClick}
-            styleFunction={getStyle}
-            tooltipTextFunction={({ countryName }: CountryContext) =>
-              `${countryName}`
-            }
-          />
-        </section>
       </main>
-      <div className={HomeStyles['bubble-area']}>
-        <div className={HomeStyles['small']}></div>
-        <div className={HomeStyles['s-medium']}></div>
-        <div className={HomeStyles['medium']}></div>
-        <div className={HomeStyles['large']}></div>
-        <div className={HomeStyles['small-l']}></div>
-      </div>
     </>
   );
 }
