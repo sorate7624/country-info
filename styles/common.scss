@@ -136,8 +136,147 @@
   }
 }
 
+//
+@keyframes flow-s-r {
+  0% {
+    top: 73%;
+    right: 10%;
+    opacity: 0;
+  }
+  25% {
+    top: 69%;
+    right: 11%;
+    opacity: 1;
+  }
+  50% {
+    top: 65%;
+    right: 12%;
+    opacity: 1;
+  }
+  75% {
+    top: 61%;
+    right: 11%;
+    opacity: 1;
+  }
+  100% {
+    top: 57%;
+    right: 10%;
+    opacity: 0;
+  }
+}
+
+@keyframes flow-s-m-r {
+  0% {
+    top: 73%;
+    right: 3%;
+    opacity: 0;
+  }
+  25% {
+    top: 69%;
+    right: 2.5%;
+    opacity: 1;
+  }
+  50% {
+    top: 65%;
+    right: 2%;
+    opacity: 1;
+  }
+  75% {
+    top: 61%;
+    right: 2.5%;
+    opacity: 1;
+  }
+  100% {
+    top: 57%;
+    right: 3%;
+    opacity: 0;
+  }
+}
+
+@keyframes flow-m-r {
+  0% {
+    top: 73%;
+    right: 15%;
+    opacity: 0;
+  }
+  25% {
+    top: 68%;
+    right: 14.5%;
+    opacity: 1;
+  }
+  50% {
+    top: 63%;
+    right: 14%;
+    opacity: 1;
+  }
+  75% {
+    top: 58%;
+    right: 14.5%;
+    opacity: 1;
+  }
+  100% {
+    top: 53%;
+    right: 15%;
+    opacity: 0;
+  }
+}
+
+@keyframes flow-s-l-r {
+  0% {
+    top: 73%;
+    right: 3%;
+    opacity: 0;
+  }
+  25% {
+    top: 68%;
+    right: 3.5%;
+    opacity: 1;
+  }
+  50% {
+    top: 63%;
+    right: 4%;
+    opacity: 1;
+  }
+  75% {
+    top: 58%;
+    right: 3.5%;
+    opacity: 1;
+  }
+  100% {
+    top: 53%;
+    right: 3%;
+    opacity: 0;
+  }
+}
+
+@keyframes flow-l-r {
+  0% {
+    top: 73%;
+    right: 17%;
+    opacity: 0;
+  }
+  25% {
+    top: 69%;
+    right: 17.5%;
+    opacity: 1;
+  }
+  50% {
+    right: 18%;
+    opacity: 1;
+  }
+  75% {
+    right: 17.5%;
+    opacity: 1;
+  }
+  100% {
+    top: 42%;
+    right: 17%;
+    opacity: 0;
+  }
+}
+
 .bubble-area {
-  div {
+  .left div {
     position: absolute;
     top: 73%;
     border-radius: 50%;
@@ -172,6 +311,43 @@
       height: 5px;
       left: 7%;
       animation: flow-l 0.7s linear infinite;
+    }
+  }
+  .right div {
+    position: absolute;
+    top: 73%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    &.small {
+      width: 10px;
+      height: 10px;
+      right: 10%;
+      animation: flow-s-r 2s linear infinite;
+    }
+    &.s-medium {
+      width: 20px;
+      height: 20px;
+      right: 3%;
+      animation: flow-s-r 1.3s linear infinite;
+    }
+    &.small-l {
+      width: 10px;
+      height: 10px;
+      right: 3%;
+      animation: flow-s-l-r 0.9s linear infinite;
+    }
+    &.medium {
+      width: 25px;
+      height: 25px;
+      right: 15%;
+      animation: flow-m-r 0.8s linear infinite;
+    }
+    &.large {
+      width: 5px;
+      height: 5px;
+      right: 7%;
+      animation: flow-l-r 0.7s linear infinite;
     }
   }
 }

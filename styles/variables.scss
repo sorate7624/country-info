@@ -1,22 +1,21 @@
-$color-green1: #e8ede4;
-$color-green2: #d6e9d7;
-$color-green3: #bfdcc1;
-$color-green4: #92cdb7;
-$color-green5: #54937d;
-$color-white: #f6f6f6;
-$color-pastel-purple: #e8dff5;
-$color-purple: #ccadf6;
-$color-pastel-red: #fce1e4;
-$color-red: #e3a1a9;
-$color-pastel-yellow: #ffefc2;
-$color-yellow: #f7d46f;
 $color-pastel-blue: #daeaf6;
 $color-blue: #99ccf3;
-//
+$color-sea-blue: #408af1;
 $color-good: #026abf;
 $color-warning: #fcc33c;
 $color-bad: #c82612;
 $color-very-bad: #2a2a2a;
+$color-prohibit: rgba(255, 255, 255, 0.5);
+
+:export {
+  colorPastelBlue: $color-pastel-blue;
+  colorBlue: $color-blue;
+  colorSeaBlue: $color-sea-blue;
+  colorGood: $color-good;
+  colorWarning: $color-warning;
+  colorBad: $color-bad;
+  colorVeryBad: $color-very-bad;
+}
 
 $mobile: 767px;
 

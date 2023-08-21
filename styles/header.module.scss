@@ -1,9 +1,66 @@
+@keyframes wave {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 46%,
+      17% 45%,
+      34% 50%,
+      56% 61%,
+      69% 62%,
+      86% 60%,
+      100% 51%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 59%,
+      16% 64%,
+      33% 65%,
+      52% 61%,
+      70% 52%,
+      85% 47%,
+      100% 48%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
 .header {
   width: 100%;
-  margin-bottom: 30px;
+  height: 100px;
 
   h1 {
     text-align: center;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    position: relative;
+  }
+
+  span {
+    z-index: 4;
+    color: $color-good;
+    font-size: 40px;
+    white-space: nowrap;
+    position: absolute;
+    transform: translateX(-50%);
+    letter-spacing: 1px;
+
+    &:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 2px $color-good;
+    }
+
+    &:nth-child(2) {
+      color: $color-good;
+      animation: wave 4s ease-in-out infinite;
+    }
   }
 }
