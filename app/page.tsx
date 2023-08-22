@@ -3,7 +3,9 @@ import * as React from 'react';
 import { countryData } from './countryData';
 import type { CountryContext } from 'react-svg-worldmap';
 import WorldMap from 'react-svg-worldmap';
-// import { isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
+import { useCountryStyle } from './hooks/useCountryStyle';
+import { useCountryHref } from './hooks/useCountryHref';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFaceLaugh,
@@ -16,37 +18,8 @@ import 'animate.css';
 import HomeStyles from '@/styles/home.module.scss';
 
 export default async function Home() {
-  const getStyle = ({ countryValue }: CountryContext) => ({
-    fill:
-      countryValue && countryValue <= 4
-        ? countryValue === 1
-          ? '#026ABF'
-          : countryValue === 2
-          ? '#FCC33C'
-          : countryValue === 3
-          ? '#C82612'
-          : countryValue === 4
-          ? '#2A2A2A'
-          : '#0047A0'
-        : 'rgba(255,255,255,.5)',
-    fillOpacity: countryValue,
-    stroke: countryValue ? 'black' : 'transparent',
-    strokeWidth: 1,
-    strokeOpacity: 0.2,
-    cursor: countryValue ? 'pointer' : 'default',
-  });
-
-  const getHref = ({
-    countryName,
-    countryCode,
-    countryValue,
-  }: CountryContext) => {
-    if (countryValue) {
-      return {
-        href: `/detail/${countryCode}`,
-      };
-    }
-  };
+  const getStyle = useCountryStyle();
+  const getHref = useCountryHref();
 
   return (
     <>
@@ -79,7 +52,7 @@ export default async function Home() {
           </aside>
           <WorldMap
             backgroundColor="transparent"
-            // size={900}
+            size={isMobile ? undefined : 900}
             data={countryData}
             hrefFunction={getHref}
             styleFunction={getStyle}
