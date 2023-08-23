@@ -6,7 +6,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 import Header from './Header';
 import 'styles/common.scss';
-import BubbleEffect from './BubbleEffect';
+// import BubbleEffect from './BubbleEffect';
 
 const poppins = Poppins({
   weight: ['400', '500', '600'],
@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Header />
         {children}
-        <BubbleEffect />
+        {/* <BubbleEffect /> */}
       </body>
     </html>
   );
