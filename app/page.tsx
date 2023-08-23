@@ -57,7 +57,7 @@ export default function Home() {
             hrefFunction={getHref}
             styleFunction={getStyle}
             tooltipTextFunction={({ countryName }: CountryContext) =>
-              `${countryName}`
+              isMobile ? '' : `${countryName}`
             }
             tooltipTextColor="white"
             richInteraction={true}
