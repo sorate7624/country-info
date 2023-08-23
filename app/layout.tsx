@@ -4,7 +4,7 @@ import { Nanum_Gothic, Poppins } from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
-import Navbar from './Header';
+import Header from './Header';
 import 'styles/common.scss';
 import BubbleEffect from './BubbleEffect';
 
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Navbar />
+        <Header />
         {children}
         <BubbleEffect />
       </body>

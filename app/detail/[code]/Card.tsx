@@ -18,7 +18,7 @@ export default function Card({ countryData }: CardProps) {
   useEffect(() => {
     setCountryInfo(countryLocaleMap.getCountryByAlpha2(countryCode));
     setFeature(countryData.feature);
-  }, [countryCode]);
+  }, [countryData.feature, countryCode]);
 
   return (
     <>

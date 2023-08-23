@@ -17,7 +17,7 @@ import {
 import 'animate.css';
 import HomeStyles from '@/styles/home.module.scss';
 
-export default async function Home() {
+export default function Home() {
   const getStyle = useCountryStyle();
   const getHref = useCountryHref();
 
