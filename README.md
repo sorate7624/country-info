@@ -49,6 +49,7 @@
   <img src="https://img.shields.io/badge/scss-CC6699?style=for-the-badge&logo=scss&logoColor=white">
   <img src="https://img.shields.io/badge/animate.css-FCE5CD?style=for-the-badge&logo=animate.css&logoColor=341C75">
   <img src="https://img.shields.io/badge/fontawesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white">
+  <br/>
   <img src="https://img.shields.io/badge/react custom hook-79E3EB?style=for-the-badge&logo=reactCustomHook&logoColor=white">
   <img src="https://img.shields.io/badge/react svg worldmap-0E9017?style=for-the-badge&logo=reactSvgWorldmap&logoColor=white">
   <img src="https://img.shields.io/badge/country locale map-7B38BA?style=for-the-badge&logo=countryLocaleMap&logoColor=white">
