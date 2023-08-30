@@ -9,6 +9,7 @@
 [https://country-info-phi.vercel.app/](https://country-info-phi.vercel.app/)
 
 ![country-info](./country-info.png)
+![country-info-detail](./country-info-detail.png)
 
 ## 설치 방법
 
